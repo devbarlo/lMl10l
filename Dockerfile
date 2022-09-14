@@ -1,9 +1,9 @@
 FROM lMl10l/userbot:slim-buster
 
 #clonning repo 
-RUN git clone https://github.com/devbarlo/cr.git /root/jepthon 
+RUN git clone https://github.com/devbarlo/cr.git /root/cr 
 #working directory 
-WORKDIR /root/jepthon
+WORKDIR /root/cr
 
 # Install requirements
 RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
