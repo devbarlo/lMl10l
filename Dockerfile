@@ -1,4 +1,4 @@
-FROM lMl10l/userbot:slim-buster
+FROM cr/userbot:slim-buster
 
 #clonning repo 
 RUN git clone https://github.com/devbarlo/cr.git /root/cr 
@@ -13,4 +13,4 @@ RUN pip3 install --no-cache-dir -r requirements.txt
 
 ENV PATH="/home/userbot/bin:$PATH"
 
-CMD ["python3","-m","jepthon"]
+CMD ["python3","-m","cr"]
