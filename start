@@ -82,11 +82,11 @@ _set_bot () {
     _run_cat_git
     python3 ../setup/updater.py ../requirements.txt requirements.txt
     chmod -R 755 bin
-    echo "   ツ جار بدء جيبثون ツ    "
+    echo "   ツ جار بدء البوت ع سورس كريستين ツ    "
     echo "
 
     "
-    python3 -m jepthon
+    python3 -m devbarlo
 }
 
 _set_bot
