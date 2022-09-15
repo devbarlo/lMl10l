@@ -86,7 +86,7 @@ _set_bot () {
     echo "
 
     "
-    python3 -m cr
+    python3 -m devbarlo
 }
 
 _set_bot
