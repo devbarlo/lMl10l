@@ -1,16 +1,13 @@
-FROM cr/userbot:slim-buster
+FROM devbarlo/cr:alpine
 
 #clonning repo 
-RUN git clone https://github.com/devbarlo/cr.git /root/cr 
+RUN git clone https://github.com/devbarlo/cr/tree/master.git /root/cr
 #working directory 
-WORKDIR /root/cr
+WORKDIR /root/devbarlo
 
 # Install requirements
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
-RUN apt-get install -y nodejs
-RUN npm i -g npm
-RUN pip3 install --no-cache-dir -r requirements.txt
+RUN pip3 install -U -r requirements.txt
 
-ENV PATH="/home/userbot/bin:$PATH"
+ENV PATH="/home/cr/bin:$PATH"
 
 CMD ["python3","-m","cr"]
