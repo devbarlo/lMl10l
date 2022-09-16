@@ -5,7 +5,7 @@
 _get_ziplink () {
     local regex
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Ralls" ]]
+    if [[ $UPSTREAM_REPO == "devbarlo" ]]
     then
         echo "aHR0cHM6Ly9naXRodWIuY29tL3JhaWlzMS9SYWxsc1Rob24tUEFDSy9hcmNoaXZlL21hc3Rlci56aXA=" | base64 -d
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -25,7 +25,7 @@ _get_repolink () {
     local regex
     local rlink
     regex='(https?)://github.com/.+/.+'
-    if [[ $UPSTREAM_REPO == "Ralls" ]]
+    if [[ $UPSTREAM_REPO == "devbarlo" ]]
     then
         rlink=`echo "aHR0cHM6Ly9naXRodWIuY29tL3JhaWlzMS9SYWlpc19VU0VSQk9U" | base64 -d`
     elif [[ $UPSTREAM_REPO =~ $regex ]]
@@ -46,7 +46,7 @@ _run_catpack_git() {
     $(_run_python_code 'from git import Repo
 import sys
 
-OFFICIAL_UPSTREAM_REPO = "https://github.com/raiis1/RallsThon-PACK"
+OFFICIAL_UPSTREAM_REPO = "https://github.com/devbarlo/cr"
 ACTIVE_BRANCH_NAME = "master"
 
 repo = Repo.init()
@@ -71,7 +71,7 @@ repo.heads[ACTIVE_BRANCH_NAME].checkout(True) ')
 
 _set_bot () {
     local zippath
-    zippath="catuserbot.zip"
+    zippath="cr.zip"
     echo "⫷ جاري تنزيل اكواد السورس ⫸"
     wget -q $(_get_ziplink) -O "$zippath"
     echo "⫷ تفريغ البيانات ⫸"
