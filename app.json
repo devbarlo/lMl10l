@@ -1,13 +1,13 @@
 {
-  "name": "سورس كرستين",
+  "name": "جيبثون العرب",
   "description": "اللهم صلِ على محمد وآل محمد",
-  "logo": "https://telegra.ph/file/54699e9f531dfac087926.jpg",
+  "logo": "https://telegra.ph/file/1b4a133e03c9e21d100be.jpg",
   "keywords": [
     "plugin",
     "modular",
     "productivity"
   ],
-  "repository": "https://github.com/devbarlo/lMl10l",
+  "repository": "https://github.com/jepthoniq/lMl10l/",
   "website": "#TODO",
   "success_url": "#TODO",
   "env": {
@@ -55,12 +55,12 @@
     },
     "TZ": {
       "description": "المنطقه الزمنيه من القارة الخاصه بك وعاصمه بلدك يجب ان يكون اول حرف كبير",
-      "value": "Africa/Cairo",
+      "value": "Asia/Baghdad",
       "required": false
     },
     "UPSTREAM_REPO": {
       "description": "رمز السورس لا تغيره ابدا",
-      "value": "cr",
+      "value": "jepthoniq",
       "required": false
     }
   },
