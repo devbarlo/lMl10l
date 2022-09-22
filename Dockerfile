@@ -1,13 +1,16 @@
-FROM devbarlo/cr:alpine
+FROM lMl10l/userbot:slim-buster
 
 #clonning repo 
-RUN git clone https://github.com/devbarlo/cr/tree/master.git /root/cr
+RUN git clone https://github.com/devbarlo/jepthon.git /root/jepthon 
 #working directory 
-WORKDIR /root/devbarlo
+WORKDIR /root/jepthon
 
 # Install requirements
-RUN pip3 install -U -r requirements.txt
+RUN curl -sL https://deb.nodesource.com/setup_16.x | bash -
+RUN apt-get install -y nodejs
+RUN npm i -g npm
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-ENV PATH="/home/cr/bin:$PATH"
+ENV PATH="/home/userbot/bin:$PATH"
 
-CMD ["python3","-m","userbot"]
+CMD ["python3","-m","jepthon"]
